@@ -31,7 +31,7 @@ Click on **Show 50 Rows** to see more data
 
 You can see your data by clicking on **first/previous/next/last** options in the menu:
 
-[insert image]
+![previous next](./assets/previousNext.png)
 
 Scanning over the data we can see that it is pretty clean, but there are some things that need to be changed.
 
@@ -47,11 +47,11 @@ This should make all values in the cells have a capitalized first letter of each
 
 owner_organization > Facet > Text Facet
 
-[insert image]
+![text facet](./assets/textFacet.png)
 
 in the left column, click the Cluster button
 
-[insert image]
+![cluster](./assets/cluster.png)
 
 Here you should be able to edit any inconsistencies in organization names.
 
@@ -61,7 +61,7 @@ Select different options of clustering algorithms from the **Key Function** drop
 
 **3. Edit directly in the cluster menu**
 
-[insert image]
+![edit cluster](./assets/editCluster.png)
 
 Here you can scroll through and manually edit based on any errors you find. Click on edit to the right of the name of the item.
 
@@ -69,7 +69,7 @@ Here you can scroll through and manually edit based on any errors you find. Clic
 
 In Location 1, choose Edit column > Split into several columns...
 
-[insert image]
+![latitude longitude](./assets/latLong.png)
 
 Type in the open parenthesis sign “(“ as the delimiter value (without quote marks)
 
@@ -105,7 +105,7 @@ choose **Edit column...**
 
 then **Add column based on this column...**
 
-[insert image]
+![year only](./assets/yearOnly.png)
 
 Type in a new column name
 
@@ -125,13 +125,11 @@ The “true” group are all of the rows with a blank value for this column. Cli
 
 To exclude the blanks, click “false”
 
-[insert image]
+![blank facet](./assets/blankFacet.png)
 
-**12. Export the data.** Click “Export” and choose your preferred file type.
+**9. Export the data.** Click “Export” and choose your preferred file type.
 
 ## Using Extract/Apply to Clean Future Datasets
-
-[insert image]
 
 With OpenRefine, you can save your work and apply those changes to future data sets!
 
@@ -158,7 +156,7 @@ Click Apply
 
 Paste the JSON code into the window and click **Perform Operations.**
 
-[insert image]
+![extract apply code](./assets/extractApplyCode.png)
 
 ### Test Yourself!
 
@@ -166,24 +164,33 @@ Now try doing some data cleaning in OpenRefine with the **practice data.xslx** f
 
 ## Reconciliation with OpenRefine
 
-[add explanation of reconciliation in OpenRefine and why you would do it]
+Reconciliation is a semi-automated process of matching text names to a name registry, such as Wikidata, in order to disambiguate an uncontrolled list of names and pull in relevant information about those names. OpenRefine has robust tools for data reconciliation tasks.
+
 [add screenshots throughout the notes]
 
 **1.  Reconcile owner_organization against Wikidata**
 
 Click dropdown > Reconcile > Start reconciling
 
+![start reconciling](./assets/startReconcile.png)
+
 Choose **Wikidata Reconciliation for OpenRefine (en)**. Choose **Reconcile against no particular type** > Start Reconciling
+
+![reconcile no type](./assets/reconcileNoType.png)
 
 **2. Select the correct matches**
 
 For those that did not automatically match, click on the options to determine best match. Choose **Match this Cell** or **Match All Identical Cells** if you want to apply the same match to identical cells.
+
+![match identical cells](./assets/matchIdenticalCells.png)
 
 **3. Extract labels and identifiers**
 
 Click dropdown > Edit column > Add column based on this column...
 
 In Expression box `type cell.recon.match.name`. Name the column **owner_organization_name**
+
+[cell recon match name](./assets/reconMatchName.png)
 
 Repeat; this time type `“https://wikidata.org/wiki/” + cell.recon.match.id`. Name the column **owner_organization_id**
 
@@ -193,9 +200,13 @@ Open the Wikidata page of one of the organizations by clicking on link in **owne
 
 Looking at the Wikidata page, find a data point you would like to extra. For example, **official website**.
 
+![official website](./assets/officialWebsite.png)
+
 Click dropdown of “owner_organization” > Edit column > Add column from reconciled values...
 
 In the **Add Property** box type in the name of the data point you would like to extract. Choose the desired property. Click OK
+
+![add property](./assets/addProperty.png)
 
 ## Further Reading
 
