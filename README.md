@@ -2,7 +2,7 @@
 
 This workshop was designed for NCSU Libraries' workshop program. Feel free to reuse and remix.
 
-Workshop folder: *insert go link*
+Workshop folder: [http://go.ncsu.edu/open-refine](http://go.ncsu.edu/open-refine)
 
 ## Data Cleaning with OpenRefine
 
@@ -165,8 +165,6 @@ Now try doing some data cleaning in OpenRefine with the **practice data.xslx** f
 ## Reconciliation with OpenRefine
 
 Reconciliation is a semi-automated process of matching text names to a name registry, such as Wikidata, in order to disambiguate an uncontrolled list of names and pull in relevant information about those names. OpenRefine has robust tools for data reconciliation tasks.
-
-[add screenshots throughout the notes]
 
 **1.  Reconcile owner_organization against Wikidata**
 
