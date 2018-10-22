@@ -188,7 +188,7 @@ Click dropdown > Edit column > Add column based on this column...
 
 In Expression box `type cell.recon.match.name`. Name the column **owner_organization_name**
 
-[cell recon match name](./assets/reconMatchName.png)
+![cell recon match name](./assets/reconMatchName.png)
 
 Repeat; this time type `“https://wikidata.org/wiki/” + cell.recon.match.id`. Name the column **owner_organization_id**
 
